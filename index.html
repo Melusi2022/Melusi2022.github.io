@@ -3,52 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lindani Melusi Khumalo</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lindani Melusi Khumalo | Full Stack Engineer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-image: url('https://username.github.io/repository/assets/background.jpg'); /* Replace with your actual URL */
-            background-size: cover; /* Ensure the image covers the entire background */
-            background-position: center; /* Center the image in the background */
-            background-attachment: fixed; /* Make the background stay fixed while scrolling */
-            background-color: red; /* Fallback color for troubleshooting */
-            color: #fff; /* Default text color in white */
+            background-image: url('assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
         }
 
-        /* Additional styling for content */
-        .container {
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
         }
 
-        h1 {
+        header h1 {
+            margin: 0;
             font-size: 2.5em;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
         }
 
         p {
             font-size: 1.2em;
+            color: #ddd;
         }
 
-        a {
-            color: #fff; /* Link color */
-            text-decoration: none; /* Remove underline from links */
-            font-weight: bold;
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
         }
 
-        a:hover {
-            text-decoration: underline; /* Underline on hover */
+        .social-links a:hover {
+            color: #007BFF;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>Lindani Melusi Khumalo</h1>
+        <p>Software Engineer | Backend Specialist | AWS Cloud Computing</p>
+    </header>
+
     <div class="container">
-        <h1>Welcome to My Landing Page</h1>
-        <p>Hi, I'm Lindani Melusi Khumalo!</p>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/lindani-khumalo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></p>
-        <p>Check out my GitHub: <a href="https://github.com/Melusi2022">GitHub Profile</a></p>
+        <img src="assets/profile-picture.jpg" alt="Lindani's Profile Picture">
+        
+        <h2>About Me</h2>
+        <p>
+            I am a certified full-stack software engineer specializing in backend development, with a passion for cloud computing, DevSecOps, and AWS. 
+            I create high-quality software solutions and focus on security, scalability, and performance.
+        </p>
+
+        <h2>Projects</h2>
+        <p>Check out some of my work:</p>
+        <div class="social-links">
+            <a href="https://github.com/Melusi2022" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/lindani-khumalo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Lindani Melusi Khumalo | All Rights Reserved</p>
+    </footer>
+
 </body>
 </html>
