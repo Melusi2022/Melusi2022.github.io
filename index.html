@@ -18,16 +18,15 @@
             color: #fff;
         }
 
-        header {
+        header, footer {
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 20px;
             text-align: center;
         }
 
-        header h1 {
+        header h1, footer p {
             margin: 0;
-            font-size: 2.5em;
         }
 
         .container {
@@ -37,6 +36,10 @@
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
+        }
+
+        .section {
+            margin: 30px 0;
         }
 
         h2 {
@@ -85,18 +88,56 @@
     <div class="container">
         <img src="assets/profile-picture.jpg" alt="Lindani's Profile Picture">
         
-        <h2>About Me</h2>
-        <p>
-            I am a certified full-stack software engineer specializing in backend development, with a passion for cloud computing, DevSecOps, and AWS. 
-            I create high-quality software solutions and focus on security, scalability, and performance.
-        </p>
+        <section class="section">
+            <h2>Welcome to My Digital Realm</h2>
+            <p>Thank you for visiting my portfolio. Here, you'll get to know more about my journey, experience, and the skills I've cultivated along the way.</p>
+        </section>
 
-        <h2>Projects</h2>
-        <p>Check out some of my work:</p>
-        <div class="social-links">
-            <a href="https://github.com/Melusi2022" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/lindani-khumalo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
-        </div>
+        <section class="section">
+            <h2>About Me</h2>
+            <p>
+                I am Lindani Melusi Khumalo, a certified full-stack software engineer with a deep specialization in backend development and cloud computing. My journey into tech was shaped by my passion for building secure, scalable, and efficient solutions. I have formal training in software engineering and continue to expand my expertise in AWS Cloud Computing and DevSecOps as I work toward becoming a DevOps engineer.
+            </p>
+            <p>
+                With a strong foundation in cloud technology and security, I am committed to delivering high-quality, well-rounded solutions. My approach combines technical expertise with a solid understanding of real-world challenges, allowing me to design and implement solutions that prioritize performance and security.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> JavaScript, Python, C, SQL</li>
+                <li><strong>Backend:</strong> Node.js, Express.js, SQLAlchemy, MongoDB</li>
+                <li><strong>Cloud & DevOps:</strong> AWS, Docker, Jenkins, CI/CD</li>
+                <li><strong>Tools & Technologies:</strong> Git, Vim, Emacs, Linux, Mongoose, bcrypt</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+            <p><strong>Software Engineer</strong> <br> Building robust web applications and managing backend systems, with a focus on user security and data protection.</p>
+            <p><strong>AWS Cloud Computing Student</strong> <br> Currently enhancing my skills in cloud infrastructure, DevSecOps practices, and the latest in cloud technology.</p>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <p>Here are a few of the projects that I am most proud of:</p>
+            <ul>
+                <li><strong>PassGuard Password Management App:</strong> Developed a secure password management tool with features such as password generation, hashing, and secure storage.</li>
+                <li><strong>Airbnb Clone:</strong> Created a web application that mimics the Airbnb platform, built with Flask, HTML, CSS, and JavaScript.</li>
+                <li><strong>Portfolio Website:</strong> Designed and built a personal portfolio to showcase my work and skills in web development and cloud computing.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Contact</h2>
+            <p>If you’d like to connect, feel free to reach out through any of the platforms below or send me an email.</p>
+            <div class="social-links">
+                <a href="https://github.com/Melusi2022" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/lindani-khumalo" target="_blank">LinkedIn</a>
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </section>
     </div>
 
     <footer>
