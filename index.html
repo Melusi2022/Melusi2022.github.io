@@ -1,163 +1,148 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Lindani Melusi Khumalo | Certified Software Engineer</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lindani Melusi Khumalo | Full Stack Engineer</title>
     <style>
-        /* Basic reset */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        /* Body styling with animated gradient background */
-        body {
-            font-family: Arial, sans-serif;
+            background-image: url('assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #fff;
-            background: linear-gradient(115deg, #1e3c72, #2a5298);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            overflow: hidden;
         }
 
-        @keyframes gradientAnimation {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        /* Main container styling */
-        #wrapper {
-            width: 100%;
-            max-width: 800px;
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            position: relative;
         }
 
-        #profile-picture {
+        header h1, footer p {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .social-links a:hover {
+            color: #007BFF;
+        }
+
+        img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #00e0ff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-in-out;
+            margin: 20px auto;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Header styling */
-        #header h1 {
-            font-size: 2em;
-            color: #00e0ff;
-        }
-
-        #header p {
-            font-size: 1.2em;
-            color: #ccc;
-        }
-
-        /* Social links styling */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            font-size: 1.5em;
-            color: #00e0ff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff6f61;
-        }
-
-        /* Footer styling */
-        #footer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #ccc;
-        }
-
-        #footer a {
-            color: #00e0ff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        #footer a:hover {
-            color: #ff6f61;
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
 
-<div id="wrapper">
-    <img src="assets/images/profile.jpg" alt="Lindani Melusi Khumalo" id="profile-picture">
-
-    <!-- Header -->
-    <header id="header">
+    <header>
         <h1>Lindani Melusi Khumalo</h1>
-        <p>Certified Software Engineer &nbsp;&bull;&nbsp; DevSecOps &nbsp;&bull;&nbsp; AI</p>
-        <p>AWS &nbsp;&bull;&nbsp; Kubernetes &nbsp;&bull;&nbsp; Docker &nbsp;&bull;&nbsp; Linux</p>
+        <p>Software Engineer | Backend Specialist | AWS Cloud Computing</p>
     </header>
 
-    <!-- Social Links -->
-    <nav>
-        <ul>
-            <li><a href="https://www.twitter.com/Melusi2022" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://www.facebook.com/yourfacebookprofile" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="https://personal-portfolio-2024-green.vercel.app/" class="icon fas fa-file-code"><span class="label">Portfolio</span></a></li>
-            <li><a href="https://github.com/Melusi2022" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-            <li><a href="mailto:your-email@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            <li><a href="#" class="icon fa-calendar" id="calendly-btn"><span class="label">Calendly Booking</span></a></li>
-            <li><a href="#" class="icon fa-graduation-cap" id="tutor-calendly-btn"><span class="label">Tutor</span></a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <img src="assets/profile-picture.jpg" alt="Lindani's Profile Picture">
+        
+        <section class="section">
+            <h2>Welcome to My Digital Realm</h2>
+            <p>Thank you for visiting my portfolio. Here, you'll get to know more about my journey, experience, and the skills I've cultivated along the way.</p>
+        </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <span class="copyright">
-            <strong>&copy; Lindani Melusi Khumalo | Cape Town, RSA | 2024 | <a href="https://www.linkedin.com/in/lindani-khumalo">Let's connect</a></strong>
-        </span>
+        <section class="section">
+            <h2>About Me</h2>
+            <p>
+                I am Lindani Melusi Khumalo, a certified full-stack software engineer with a deep specialization in backend development and cloud computing. My journey into tech was shaped by my passion for building secure, scalable, and efficient solutions. I have formal training in software engineering and continue to expand my expertise in AWS Cloud Computing and DevSecOps as I work toward becoming a DevOps engineer.
+            </p>
+            <p>
+                With a strong foundation in cloud technology and security, I am committed to delivering high-quality, well-rounded solutions. My approach combines technical expertise with a solid understanding of real-world challenges, allowing me to design and implement solutions that prioritize performance and security.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> JavaScript, Python, C, SQL</li>
+                <li><strong>Backend:</strong> Node.js, Express.js, SQLAlchemy, MongoDB</li>
+                <li><strong>Cloud & DevOps:</strong> AWS, Docker, Jenkins, CI/CD</li>
+                <li><strong>Tools & Technologies:</strong> Git, Vim, Emacs, Linux, Mongoose, bcrypt</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+            <p><strong>Software Engineer</strong> <br> Building robust web applications and managing backend systems, with a focus on user security and data protection.</p>
+            <p><strong>AWS Cloud Computing Student</strong> <br> Currently enhancing my skills in cloud infrastructure, DevSecOps practices, and the latest in cloud technology.</p>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <p>Here are a few of the projects that I am most proud of:</p>
+            <ul>
+                <li><strong>PassGuard Password Management App:</strong> Developed a secure password management tool with features such as password generation, hashing, and secure storage.</li>
+                <li><strong>Airbnb Clone:</strong> Created a web application that mimics the Airbnb platform, built with Flask, HTML, CSS, and JavaScript.</li>
+                <li><strong>Portfolio Website:</strong> Designed and built a personal portfolio to showcase my work and skills in web development and cloud computing.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Contact</h2>
+            <p>If you’d like to connect, feel free to reach out through any of the platforms below or send me an email.</p>
+            <div class="social-links">
+                <a href="https://github.com/Melusi2022" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/lindani-khumalo" target="_blank">LinkedIn</a>
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Lindani Melusi Khumalo | All Rights Reserved</p>
     </footer>
-</div>
-
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script>
-    // Calendly pop-up for general booking
-    document.getElementById("calendly-btn").addEventListener("click", function(event) {
-        event.preventDefault();
-        Calendly.initPopupWidget({ url: 'https://calendly.com/your-calendly-url' });
-    });
-
-    // Calendly pop-up for tutoring
-    document.getElementById("tutor-calendly-btn").addEventListener("click", function(event) {
-        event.preventDefault();
-        Calendly.initPopupWidget({ url: 'https://calendly.com/your-tutor-calendly-url' });
-    });
-</script>
 
 </body>
 </html>
