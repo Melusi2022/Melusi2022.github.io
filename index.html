@@ -15,13 +15,18 @@
             box-sizing: border-box;
         }
 
-        /* Body styling with background animation */
+        /* Body styling with animated gradient background */
         body {
             font-family: Arial, sans-serif;
             color: #fff;
             background: linear-gradient(115deg, #1e3c72, #2a5298);
             background-size: 400% 400%;
             animation: gradientAnimation 15s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
 
         @keyframes gradientAnimation {
@@ -29,53 +34,42 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Main container */
+        /* Main container styling */
         #wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
+            width: 100%;
+            max-width: 800px;
             padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
 
-        #main {
-            max-width: 800px;
-            width: 100%;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        #profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00e0ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Header styling */
         #header h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             color: #00e0ff;
-            margin-bottom: 10px;
         }
 
         #header p {
             font-size: 1.2em;
             color: #ccc;
-        }
-
-        /* Welcome point styling */
-        #welcome-point {
-            margin: 20px 0;
-            font-size: 1.1em;
-            color: #ddd;
-            animation: fadeInUp 1.5s ease forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Social links styling */
@@ -85,7 +79,7 @@
             margin: 20px 0;
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         nav ul li a {
@@ -120,48 +114,38 @@
 <body>
 
 <div id="wrapper">
-    <div id="main">
-        <!-- Header -->
-        <header id="header">
-            <h1>Lindani Melusi Khumalo</h1>
-            <p>Certified Software Engineer &nbsp;&bull;&nbsp; DevSecOps &nbsp;&bull;&nbsp; AI</p>
-            <p>AWS &nbsp;&bull;&nbsp; K8s &nbsp;&bull;&nbsp; Docker &nbsp;&bull;&nbsp; Linux</p>
-        </header>
+    <img src="assets/images/profile.jpg" alt="Lindani Melusi Khumalo" id="profile-picture">
 
-        <!-- Welcome Point -->
-        <div id="welcome-point">
-            <p>Welcome! I’m Lindani, a passionate software engineer focused on building secure, scalable solutions in cloud and AI-driven environments. Let's connect and explore the possibilities together.</p>
-        </div>
+    <!-- Header -->
+    <header id="header">
+        <h1>Lindani Melusi Khumalo</h1>
+        <p>Certified Software Engineer &nbsp;&bull;&nbsp; DevSecOps &nbsp;&bull;&nbsp; AI</p>
+        <p>AWS &nbsp;&bull;&nbsp; Kubernetes &nbsp;&bull;&nbsp; Docker &nbsp;&bull;&nbsp; Linux</p>
+    </header>
 
-        <!-- Social Links -->
-        <nav>
-            <ul>
-                <li><a href="https://www.twitter.com/Melusi2022" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="https://www.facebook.com/yourfacebookprofile" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="https://personal-portfolio-2024-green.vercel.app/" class="icon fas fa-file-code"><span class="label">Portfolio</span></a></li>
-                <li><a href="https://github.com/Melusi2022" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="mailto:your-email@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                <li><a href="#" class="icon fa-calendar" id="calendly-btn"><span class="label">Calendly Booking</span></a></li>
-                <li><a href="#" class="icon fa-graduation-cap" id="tutor-calendly-btn"><span class="label">Tutor</span></a></li>
-            </ul>
-        </nav>
+    <!-- Social Links -->
+    <nav>
+        <ul>
+            <li><a href="https://www.twitter.com/Melusi2022" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/yourfacebookprofile" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://personal-portfolio-2024-green.vercel.app/" class="icon fas fa-file-code"><span class="label">Portfolio</span></a></li>
+            <li><a href="https://github.com/Melusi2022" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="mailto:your-email@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            <li><a href="#" class="icon fa-calendar" id="calendly-btn"><span class="label">Calendly Booking</span></a></li>
+            <li><a href="#" class="icon fa-graduation-cap" id="tutor-calendly-btn"><span class="label">Tutor</span></a></li>
+        </ul>
+    </nav>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <span class="copyright">
-                <strong>&copy; Lindani Melusi Khumalo | Cape Town, RSA | 2024 | <a href="https://www.linkedin.com/in/lindani-khumalo">Let's connect</a></strong>
-            </span>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <span class="copyright">
+            <strong>&copy; Lindani Melusi Khumalo | Cape Town, RSA | 2024 | <a href="https://www.linkedin.com/in/lindani-khumalo">Let's connect</a></strong>
+        </span>
+    </footer>
 </div>
 
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <script>
-    // Remove preloading class
-    window.onload = function() {
-        document.body.classList.remove('is-preload');
-    };
-    
     // Calendly pop-up for general booking
     document.getElementById("calendly-btn").addEventListener("click", function(event) {
         event.preventDefault();
