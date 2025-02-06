@@ -16,6 +16,12 @@
             background-position: center;
             background-attachment: fixed;
             color: #fff;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.light-mode {
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         header, footer {
@@ -23,6 +29,12 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        body.light-mode header, body.light-mode footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
         }
 
         header h1, footer p {
@@ -36,6 +48,11 @@
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
+            transition: background-color 0.5s;
+        }
+
+        body.light-mode .container {
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
         .section {
@@ -45,11 +62,21 @@
         h2 {
             font-size: 2em;
             color: #fff;
+            transition: color 0.5s;
+        }
+
+        body.light-mode h2 {
+            color: #333;
         }
 
         p {
             font-size: 1.2em;
             color: #ddd;
+            transition: color 0.5s;
+        }
+
+        body.light-mode p {
+            color: #555;
         }
 
         .social-links a {
@@ -57,6 +84,11 @@
             text-decoration: none;
             color: #fff;
             font-size: 1.5em;
+            transition: color 0.5s;
+        }
+
+        body.light-mode .social-links a {
+            color: #333;
         }
 
         .social-links a:hover {
@@ -75,12 +107,100 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.light-mode footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.5s;
+        }
+
+        body.light-mode .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.5s;
+        }
+
+        body.light-mode .navbar a {
+            color: #333;
+        }
+
+        .navbar a:hover {
+            color: #007BFF;
+        }
+
+        .mode-toggle {
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #fff;
+            transition: color 0.5s;
+        }
+
+        body.light-mode .mode-toggle {
+            color: #333;
+        }
+
+        .mode-toggle:hover {
+            color: #007BFF;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.light-mode .scroll-top {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        .scroll-top:hover {
+            background-color: #007BFF;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <nav class="navbar">
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="mode-toggle" onclick="toggleMode()">🌓</div>
+    </nav>
+
+    <header id="home">
         <h1>Lindani Melusi Khumalo</h1>
         <p>Software Engineer | Backend Specialist | AWS Cloud Computing</p>
     </header>
@@ -88,7 +208,7 @@
     <div class="container">
         <img src="assets/profile-picture.jpg" alt="Lindani's Profile Picture">
         
-        <section class="section">
+        <section class="section" id="about">
             <h2>Welcome to My Digital Realm</h2>
             <p>Thank you for visiting my portfolio. Here, you'll get to know more about my journey, experience, and the skills I've cultivated along the way.</p>
         </section>
@@ -103,7 +223,7 @@
             </p>
         </section>
 
-        <section class="section">
+        <section class="section" id="skills">
             <h2>Skills</h2>
             <ul>
                 <li><strong>Programming Languages:</strong> JavaScript, Python, C, SQL</li>
@@ -113,13 +233,13 @@
             </ul>
         </section>
 
-        <section class="section">
+        <section class="section" id="experience">
             <h2>Experience</h2>
             <p><strong>Software Engineer</strong> <br> Building robust web applications and managing backend systems, with a focus on user security and data protection.</p>
             <p><strong>AWS Cloud Computing Student</strong> <br> Currently enhancing my skills in cloud infrastructure, DevSecOps practices, and the latest in cloud technology.</p>
         </section>
 
-        <section class="section">
+        <section class="section" id="projects">
             <h2>Projects</h2>
             <p>Here are a few of the projects that I am most proud of:</p>
             <ul>
@@ -129,7 +249,7 @@
             </ul>
         </section>
 
-        <section class="section">
+        <section class="section" id="contact">
             <h2>Contact</h2>
             <p>If you’d like to connect, feel free to reach out through any of the platforms below or send me an email.</p>
             <div class="social-links">
@@ -143,6 +263,33 @@
     <footer>
         <p>&copy; 2025 Lindani Melusi Khumalo | All Rights Reserved</p>
     </footer>
+
+    <div class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show scroll-to-top button when scrolling down
+        window.onscroll = function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTop.style.display = 'block';
+            } else {
+                scrollTop.style.display = 'none';
+            }
+        };
+
+        // Dark/Light mode toggle
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
 
 </body>
 </html>
